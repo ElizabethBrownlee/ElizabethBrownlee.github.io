@@ -6,14 +6,14 @@
     <title>Elizabeth Brownlee - Chiropractor</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
         }
         header {
-            background: #007BFF;
+            background: #381068;
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -22,24 +22,65 @@
             padding: 20px;
             max-width: 800px;
             margin: auto;
-            background: white;
+            background: #B8BDE2;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+        .welcome-container {
+            display: flex;
+            align-items: left;
+            margin-bottom: 10px;
+        }
+        .welcome-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .portrait {
+            width: 150px; /* Adjust the size as needed */
+            height: auto;
+            border-radius: 5px; /* Optional: adds rounded corners */
         }
         h1 {
             margin: 0;
         }
         .contact-info {
-            margin-top: 40px;
+            margin-top: 10px;
+        }
+        .icon {
+            text-align: center;
+            margin: auto;
+            width: 60px; /* Adjust the size as needed */
+            height: auto;
+            border-radius: 2px; /* Optional: adds rounded corners */
         }
         footer {
             text-align: center;
             padding: 10px 0;
-            background: #007BFF;
+            background: #381068;
             color: white;
             position: relative;
             bottom: 0;
             width: 100%;
         }
+        .footer-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .footer-text {
+            text-align: center;
+            padding: 10px 0;
+            background: #381068;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
         /* Responsive Styles */
         @media (max-width: 600px) {
             header {
@@ -57,6 +98,24 @@
             h2 {
                 font-size: 1.2em;
             }
+            .welcome-container {
+                flex-direction: column; /* Stack on smaller screens */
+                align-items: center;
+            }
+            .welcome-text {
+                padding-right: 0; /* Remove right padding */
+                text-align: center; /* Center text on small screens */
+            }
+            .portrait {
+                margin-top: 20px; /* Add margin on top for spacing */
+            }
+            .footer-container {
+                flex-direction: column; /* Stack on smaller screens */
+                align-items: center;
+            }
+            .icon {
+                margin-top: 5px; /* Add margin on top for spacing */
+            }
         }
     </style>
 </head>
@@ -65,19 +124,31 @@
         <h1>Elizabeth Brownlee - Chiropractor</h1>
     </header>
     <main>
-        <h2>Welcome</h2>
-        <p>I have a practice in Chelmer, a quiet suburb of Brisbane, dedicated to providing you with the highest quality of care. My goal is to help you achieve optimal health and wellness through personalised chiropractic treatments.</p>
+        <div class="welcome-container">
+            <div class="welcome-text">
+                <h2>Welcome</h2>
+                <p>I have a practice in Chelmer, a quiet suburb of Brisbane, dedicated to providing you with the highest quality of care. My goal is to help you achieve optimal health and wellness through personalised chiropractic treatments.</p>
+            </div>
+            <img src="portrait.jpg" alt="Elizabeth Brownlee" class="portrait"> <!-- Replace with your image path -->
+        </div>
         
         <div class="contact-info">
+            <p><strong>Contact me for appointments and enquiries on:</strong></p>
+            <p>0400 831 228</p>
             <p><strong>Clinic address:</strong></p>
             <p>32 Crawford Road</p>
             <p>Chelmer QLD 4068</p>
-            <p><strong>Contact me for appointments and enquiries on:</strong></p>
-            <p>0400 831 228</p>
         </div>
     </main>
     <footer>
-        <p>&copy; 2025 Elizabeth Brownlee. All rights reserved.</p>
+        <div class="footer-container">
+            <img src="icon.jpg" alt="Elizabeth Brownlee Chiropractor" class="icon">
+            <div class="footer-text">
+               <p>&copy; 2025 Elizabeth Brownlee. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
     </footer>
 </body>
 </html>
